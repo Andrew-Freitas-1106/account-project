@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Service {
 	
-	private Map<String,Account> bankAccount;
+	Map<String,Account> bankAccount;
 	
 	public Service() {
 		bankAccount = new HashMap<>();
