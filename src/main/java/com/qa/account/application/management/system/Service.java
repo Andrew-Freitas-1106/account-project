@@ -12,12 +12,12 @@ public class Service {
 	}
 	
 
-	public void add(String key, Account account) {
+	public void addAccount(String key, Account account) {
 		bankAccount.put(key, account);
 		
 	}
 
-	public Account retrieve(String key) {
+	public Account retrieveAccount(String key) {
 		return bankAccount.get(key);
 	}
 
