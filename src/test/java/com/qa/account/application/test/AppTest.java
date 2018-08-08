@@ -14,9 +14,9 @@ public class AppTest {
 	public void setup() {
 		
 		service = new Service();
-		service.addAccount(1, new Account("Daniel","Bossman","0001"));
-		service.addAccount(2, new Account("Michael","Massey","0002"));
-		service.addAccount(3, new Account("Nathan","Ahrens","0003"));
+		service.addAccount(new Account("Daniel","Bossman","0001"));
+		service.addAccount(new Account("Michael","Massey","0002"));
+		service.addAccount(new Account("Nathan","Ahrens","0003"));
 	}
 
     
