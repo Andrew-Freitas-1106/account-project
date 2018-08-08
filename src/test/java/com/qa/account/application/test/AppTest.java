@@ -14,23 +14,20 @@ public class AppTest {
 	public void setup() {
 		
 		service = new Service();
-		service.addAccount("1", new Account("Daniel","Bossman","0001"));
-		service.addAccount("2", new Account("Michael","Massey","0002"));
-		service.addAccount("3", new Account("Nathan","Ahrens","0003"));
+		service.addAccount(1, new Account("Daniel","Bossman","0001"));
+		service.addAccount(2, new Account("Michael","Massey","0002"));
+		service.addAccount(3, new Account("Nathan","Ahrens","0003"));
 	}
 
     
 	@Test
     public void testGetFirstName() {
-
-		assertEquals("Michael",service.retrieveAccount("2").getFirstName());
-        
-        //sertEquals(, actual);
+		assertEquals("Michael",service.retrieveAccount(2).getFirstName());
     }	
 	
 	@Test
 	public void testApp() {
-		assertEquals("First Name: Michael Last Name: Massey Account Number: 0002", service.retrieveAccount("2").toString());
+		assertEquals("First Name: Michael Last Name: Massey Account Number: 0002", service.retrieveAccount(2).toString());
 	}
     
 }
