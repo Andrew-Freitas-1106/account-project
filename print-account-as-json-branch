@@ -1,0 +1,83 @@
+diff --cc .gitignore
+index 859c132,4cc13a6..0000000
+--- a/.gitignore
++++ b/.gitignore
+@@@ -1,7 -1,7 +1,16 @@@
+++.class
+++.classpath
+++.project
+++/bin
+++/.settings/
+++.scannerwork
+++>>>>>>> print-account-as-json-branch
+  /target/
+diff --cc src/main/java/com/qa/account/application/management/system/Service.java
+index f7c76d1,f89b76e..0000000
+--- a/src/main/java/com/qa/account/application/management/system/Service.java
++++ b/src/main/java/com/qa/account/application/management/system/Service.java
+@@@ -1,24 -1,30 +1,57 @@@
+ -package com.qa.account.application.management.system;
+ -
+ -import java.util.HashMap;
+ -import java.util.Map;
+ -
+ -public class Service {
+ -	
+ -	private Map<Integer,Account> bankAccount;
+ -
+ -	public Service() {
+ -		bankAccount = new HashMap<>();
+ -	}
+ -	
+ -	public void addAccount(Integer key, Account account) {
+ -		bankAccount.put(key, account);
+ -	}
+ -
+ -	public Account retrieveAccount(Integer key) {
+ -		return bankAccount.get(key);
+ -	}
+ -	
+ -	public Map<Integer, Account> getBankAccount() {
+ -		return bankAccount;
+ -	}
+ -	
+ -	public void setBankAccount(Map<Integer, Account> bankAccount) {
+ -		this.bankAccount = bankAccount;
+ -	}
+ -
+ -}
+
+++package com.qa.account.application.management.system;
+++
+++import java.util.HashMap;
+++import java.util.Map;
+++
+++public class Service {
+++	
+++	private Map<Integer,Account> bankAccount;
+++
+++	public Service() {
+++		bankAccount = new HashMap<>();
+++	}
+++	
+++	public void addAccount(Integer key, Account account) {
+++		bankAccount.put(key, account);
+++	}
+++
+++	public Account retrieveAccount(Integer key) {
+++		return bankAccount.get(key);
+++	}
+++	
+++	public Map<Integer, Account> getBankAccount() {
+++		return bankAccount;
+++	}
+++	
+++	public void setBankAccount(Map<Integer, Account> bankAccount) {
+++		this.bankAccount = bankAccount;
+++	}
+++
+++}
+++>>>>>>> print-account-as-json-branch
+diff --cc target/classes/com/qa/account/application/management/system/Service.class
+index 8bf2f83,8777058..0000000
+Binary files differ
