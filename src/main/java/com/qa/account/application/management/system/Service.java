@@ -5,17 +5,21 @@ import java.util.Map;
 
 public class Service {
 	
+	private int counter = 0;
+	private int nameCounter = 0;
 	private Map<Integer,Account> bankAccount;
+	
 
 	public Service() {
 		bankAccount = new HashMap<>();
 	}
-	
-	public void addAccount(Integer key, Account account) {
-		bankAccount.put(key, account);
+	  
+	public void addAccount(Account account) {
+		bankAccount.put(counter, account);
+		counter++;
 	}
 
-	public Account retrieveAccount(Integer key) {
+	public Account retrieveAccount(int key) {
 		return bankAccount.get(key);
 	}
 	
@@ -25,6 +29,18 @@ public class Service {
 	
 	public void setBankAccount(Map<Integer, Account> bankAccount) {
 		this.bankAccount = bankAccount;
+	}
+
+	public int countNames(String firstName) {
+
+		for (Account accountMap: bankAccount.values()) {
+			Boolean namesMatch = accountMap.getFirstName().equals(firstName);
+			if (namesMatch) {
+				nameCounter++;
+			}			
+			
+		}	
+		return nameCounter;
 	}
 
 }
