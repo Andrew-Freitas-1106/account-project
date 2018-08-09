@@ -4,7 +4,7 @@ import java.util.Map;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.qa.account.application.management.system.Account;
+import com.qa.domain.Account;
 
 public class JSONConverter {
 
@@ -14,12 +14,8 @@ public class JSONConverter {
 		return gson.toJson(accountMap);
 	}
 	
-	public void convertByIdToJson(int id) {
-		
-	}
-	
-	public void convertToJava() {
-		
+	public <T> T convertToJava(String jsonString, Class<T> klass) {
+		return gson.fromJson(jsonString, klass);
 	}
 
 }

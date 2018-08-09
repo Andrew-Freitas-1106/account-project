@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-.class
+.settings
+target
 .classpath
+.factorypath
 .project
-/bin
-/.settings/
-.scannerwork
-=======
-.class
-.classpath
-.project
-/bin
-/.settings/
-.scannerwork
->>>>>>> print-account-as-json-branch
-/target/
+bin

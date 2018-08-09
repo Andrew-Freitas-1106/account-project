@@ -1,7 +1,9 @@
-package com.qa.account.application.management.system;
+package com.qa.service;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import com.qa.domain.Account;
 
 public class Service {
 	

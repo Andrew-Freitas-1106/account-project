@@ -1,18 +1,16 @@
-package com.qa.account.application;
+package com.qa.application;
 
 import java.util.Map;
 
-import com.qa.account.application.management.system.Account;
-import com.qa.account.application.management.system.Service;
 import com.qa.account.util.JSONConverter;
+import com.qa.domain.Account;
+import com.qa.service.Service;
 
 
 public class App {
 
 	public static void main(String[] args) {
-		
-		System.out.println("Hello world to the standard out");
-		
+
 		Service service = new Service();
 		service.addAccount(new Account("Daniel","Bossman","0001"));
 		service.addAccount(new Account("Michael","Massey","0002"));

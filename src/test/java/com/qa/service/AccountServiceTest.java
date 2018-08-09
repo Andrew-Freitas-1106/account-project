@@ -1,15 +1,15 @@
-package com.qa.account.firstNameCount.test;
+package com.qa.service;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import com.qa.account.application.management.system.Account;
-import com.qa.account.application.management.system.Service;
+import com.qa.domain.Account;
+import com.qa.service.Service;
 
-public class TestNameCount {
-	Service service;
+public class AccountServiceTest {
+	private Service service;
 
 	
 	@Before
@@ -20,6 +20,21 @@ public class TestNameCount {
 		service.addAccount(new Account("Nathan","Ahrens","0003"));
 		service.addAccount(new Account("Nathan","Jack","0004"));
 		service.addAccount(new Account("Nathan","Owens","0005"));
+	}
+	
+	@Test
+    public void testGetFirstName() {
+		assertEquals("Michael",service.retrieveAccount(1).getFirstName());
+    }
+	
+	@Test
+	public void testGetLastName() {
+		assertEquals("Jack",service.retrieveAccount(3).getLastName());
+	}
+	
+	@Test
+	public void testGetAccountNumber() {
+		assertEquals("0005",service.retrieveAccount(4).getAccountNumber());
 	}
 
 	@Test
