@@ -10,6 +10,7 @@ import com.qa.account.application.management.system.Service;
 
 public class TestNameCount {
 	Service service;
+
 	
 	@Before
 	public void setup() {

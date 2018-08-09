@@ -33,11 +33,10 @@ public class Service {
 
 	public int countNames(String firstName) {
 
-		for (Account s: bankAccount.values()) {
-
-			if (s.getFirstName().equals(firstName)) {
+		for (Account accountMap: bankAccount.values()) {
+			Boolean namesMatch = accountMap.getFirstName().equals(firstName);
+			if (namesMatch) {
 				nameCounter++;
-				System.out.println(s.getFirstName());
 			}			
 			
 		}	
